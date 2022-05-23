@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+ 	int i, j, rows, columns, a[10][10], Sum = 0;
+ 	int *p;
+ 	printf("\nEnter Number of rows and columns  :  ");
+ 	scanf("%d %d", &i, &j);
+ 	printf("\nEnter the Matrix Elements \n");
+ 	for(rows = 0; rows < i; rows++)
+  	{
+   		for(columns = 0;columns < j;columns++)
+    	{
+      		scanf("%d", &a[rows][columns]);
+    	}
+  	} 	  
+ 	for(rows = 0; rows < i; rows++)
+  	{
+   		Sum = Sum + a[rows][rows];
+  	}
+  	printf("\nThe matrix is\n");
+  	for(rows = 0; rows < i; rows++)
+  	{
+   		for(columns = 0;columns < j;columns++)
+    	{
+    		p=&a[rows][columns];
+      		printf("%d\t", *p);
+    	}
+    	printf("\n");
+  	}
+  	printf("\n The Sum of Diagonal Elements of a Matrix =  %d\n", Sum );
+ 	return 0;
+}
